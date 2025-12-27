@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - RPS School</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="user-info">
+                <h1>Welcome, <span id="student-name"></span></h1>
+                <p>Class: <span id="student-class"></span> | Admission No: <span id="student-id"></span></p>
+            </div>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </header>
+
+        <nav class="dashboard-nav">
+            <div class="nav-grid">
+                <div class="nav-card" data-section="homework">
+                    <i class="nav-icon">📚</i>
+                    <h3>Homework</h3>
+                    <p>View today's homework</p>
+                </div>
+                <div class="nav-card" data-section="test-scores">
+                    <i class="nav-icon">📊</i>
+                    <h3>Test Scores</h3>
+                    <p>Monthly test results</p>
+                </div>
+                <div class="nav-card" data-section="leave-application">
+                    <i class="nav-icon">📝</i>
+                    <h3>Leave Application</h3>
+                    <p>Apply for leave</p>
+                </div>
+                <div class="nav-card" data-section="upcoming-exams">
+                    <i class="nav-icon">📅</i>
+                    <h3>Upcoming Exams</h3>
+                    <p>Exam schedule</p>
+                </div>
+                <div class="nav-card" data-section="announcements">
+                    <i class="nav-icon">📢</i>
+                    <h3>Announcements</h3>
+                    <p>School notices</p>
+                </div>
+                <div class="nav-card" data-section="attendance">
+                    <i class="nav-icon">✅</i>
+                    <h3>My Attendance</h3>
+                    <p>View attendance record</p>
+                </div>
+            </div>
+        </nav>
+
+        <main class="dashboard-content">
+            <div id="content-area">
+                <div class="welcome-section">
+                    <h2>Dashboard Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Today's Attendance</h4>
+                            <span class="stat-value" id="today-attendance">-</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Monthly Attendance</h4>
+                            <span class="stat-value" id="monthly-attendance">-</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Pending Homework</h4>
+                            <span class="stat-value" id="pending-homework">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="student-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Data - RPS School</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="fade-in">
+            <h1>RPS School Student Data</h1>
+            <h2>Class 11 Non-Medical A</h2>
+        </header>
+        <div class="search-section slide-in">
+            <label for="student-search">Search Student:</label>
+            <input type="text" id="student-search" list="students-list" placeholder="Type student name">
+            <datalist id="students-list">
+                <!-- Student options will be added here -->
+            </datalist>
+        </div>
+        <div class="student-info slide-in" id="student-info" style="display: none;">
+            <h3 id="student-name"></h3>
+            <div class="attendance-summary">
+                <p id="monthly-summary"></p>
+            </div>
+            <div class="chart-container">
+                <canvas id="attendance-chart"></canvas>
+            </div>
+            <div class="attendance-details">
+                <h4>Monthly Attendance Details</h4>
+                <ul id="attendance-list"></ul>
+            </div>
+        </div>
+        <a href="attendance.html" class="back-link">Back to Attendance Marking</a>
+    </div>
+    <script src="student-data.js"></script>
+</body>
+</html>

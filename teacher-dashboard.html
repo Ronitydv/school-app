@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - RPS School</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="user-info">
+                <h1>Welcome, <span id="teacher-name"></span></h1>
+                <p>Subject: <span id="teacher-subject"></span> | ID: <span id="teacher-id"></span></p>
+            </div>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </header>
+
+        <nav class="dashboard-nav">
+            <div class="nav-grid">
+                <div class="nav-card" data-section="attendance">
+                    <i class="nav-icon">✅</i>
+                    <h3>Take Attendance</h3>
+                    <p>Mark student attendance</p>
+                </div>
+                <div class="nav-card" data-section="upload-marks">
+                    <i class="nav-icon">📊</i>
+                    <h3>Upload Test Marks</h3>
+                    <p>Enter student test scores</p>
+                </div>
+                <div class="nav-card" data-section="announcements">
+                    <i class="nav-icon">📢</i>
+                    <h3>Make Announcement</h3>
+                    <p>Post school notices</p>
+                </div>
+                <div class="nav-card" data-section="homework">
+                    <i class="nav-icon">📝</i>
+                    <h3>Upload Homework</h3>
+                    <p>Assign daily homework</p>
+                </div>
+                <div class="nav-card" data-section="student-data">
+                    <i class="nav-icon">👥</i>
+                    <h3>Student Data</h3>
+                    <p>View student analytics</p>
+                </div>
+                <div class="nav-card" data-section="manage-students">
+                    <i class="nav-icon">⚙️</i>
+                    <h3>Manage Students</h3>
+                    <p>Edit student information</p>
+                </div>
+            </div>
+        </nav>
+
+        <main class="dashboard-content">
+            <div id="content-area">
+                <div class="welcome-section">
+                    <h2>Teacher Dashboard</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Today's Attendance</h4>
+                            <span class="stat-value" id="today-attendance">-</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Class Average</h4>
+                            <span class="stat-value" id="class-average">-</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Pending Tasks</h4>
+                            <span class="stat-value" id="pending-tasks">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="teacher-dashboard.js"></script>
+</body>
+</html>

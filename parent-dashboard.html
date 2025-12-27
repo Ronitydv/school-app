@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard - RPS School</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="user-info">
+                <h1>Welcome Parent</h1>
+                <p>Child: <span id="child-name"></span> | Admission No: <span id="child-id"></span></p>
+            </div>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </header>
+
+        <nav class="dashboard-nav">
+            <div class="nav-grid">
+                <div class="nav-card" data-section="fees">
+                    <i class="nav-icon">💰</i>
+                    <h3>Fees Payment</h3>
+                    <p>View and pay school fees</p>
+                </div>
+                <div class="nav-card" data-section="attendance">
+                    <i class="nav-icon">📊</i>
+                    <h3>Child's Attendance</h3>
+                    <p>Monthly attendance record</p>
+                </div>
+                <div class="nav-card" data-section="test-records">
+                    <i class="nav-icon">📈</i>
+                    <h3>Test Records</h3>
+                    <p>Academic performance</p>
+                </div>
+                <div class="nav-card" data-section="teachers">
+                    <i class="nav-icon">👨‍🏫</i>
+                    <h3>Teachers Contact</h3>
+                    <p>Subject teachers details</p>
+                </div>
+                <div class="nav-card" data-section="announcements">
+                    <i class="nav-icon">📢</i>
+                    <h3>School Announcements</h3>
+                    <p>Important notices</p>
+                </div>
+                <div class="nav-card" data-section="leave-status">
+                    <i class="nav-icon">📝</i>
+                    <h3>Leave Applications</h3>
+                    <p>Check leave status</p>
+                </div>
+            </div>
+        </nav>
+
+        <main class="dashboard-content">
+            <div id="content-area">
+                <div class="welcome-section">
+                    <h2>Parent Dashboard</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>Monthly Attendance</h4>
+                            <span class="stat-value" id="child-attendance">-</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Fees Status</h4>
+                            <span class="stat-value" id="fees-status">-</span>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Latest Grade</h4>
+                            <span class="stat-value" id="latest-grade">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="parent-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS School Management System - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>RPS School</h1>
+            <p>Management System</p>
+        </div>
+        
+        <div class="role-selection">
+            <h2>Select Your Role</h2>
+            <div class="role-buttons">
+                <button class="role-btn" data-role="student">
+                    <i class="icon">👨‍🎓</i>
+                    Student
+                </button>
+                <button class="role-btn" data-role="teacher">
+                    <i class="icon">👨‍🏫</i>
+                    Teacher
+                </button>
+                <button class="role-btn" data-role="parent">
+                    <i class="icon">👨‍👩‍👧‍👦</i>
+                    Parent
+                </button>
+            </div>
+        </div>
+        
+        <div class="login-form" id="login-form" style="display: none;">
+            <h3 id="form-title">Student Login</h3>
+            
+            <form id="student-form" class="form-section" style="display: none;">
+                <div class="input-group">
+                    <label for="student-id">Admission Number</label>
+                    <input type="text" id="student-id" placeholder="Enter Admission Number" required>
+                </div>
+                <div class="input-group">
+                    <label for="student-dob">Date of Birth</label>
+                    <input type="text" id="student-dob" placeholder="DD/MM/YYYY" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            
+            <form id="teacher-form" class="form-section" style="display: none;">
+                <div class="input-group">
+                    <label for="teacher-id">Teacher ID</label>
+                    <input type="text" id="teacher-id" placeholder="Enter Teacher ID" required>
+                </div>
+                <div class="input-group">
+                    <label for="teacher-phone">Phone Number</label>
+                    <input type="tel" id="teacher-phone" placeholder="Enter Phone Number" required>
+                </div>
+                <button type="button" id="send-otp-teacher" class="otp-btn">Send OTP</button>
+                <div class="input-group" id="otp-section-teacher" style="display: none;">
+                    <label for="teacher-otp">Enter OTP</label>
+                    <input type="text" id="teacher-otp" placeholder="Enter 6-digit OTP" required>
+                </div>
+                <button type="submit" class="login-btn" id="teacher-login-btn" style="display: none;">Login</button>
+            </form>
+            
+            <form id="parent-form" class="form-section" style="display: none;">
+                <div class="input-group">
+                    <label for="parent-phone">Guardian Phone Number</label>
+                    <input type="tel" id="parent-phone" placeholder="Enter Phone Number" required>
+                </div>
+                <button type="button" id="send-otp-parent" class="otp-btn">Send OTP</button>
+                <div class="input-group" id="otp-section-parent" style="display: none;">
+                    <label for="parent-otp">Enter OTP</label>
+                    <input type="text" id="parent-otp" placeholder="Enter 6-digit OTP" required>
+                </div>
+                <button type="submit" class="login-btn" id="parent-login-btn" style="display: none;">Login</button>
+            </form>
+            
+            <button id="back-btn" class="back-btn">← Back to Role Selection</button>
+        </div>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

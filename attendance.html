@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance App - RPS School Class 11 Non-Medical A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="fade-in">
+            <h1>RPS School Attendance System</h1>
+            <h2>Class 11 Non-Medical A</h2>
+            <div class="header-buttons">
+                <button id="manage-students-btn">Manage Students</button>
+                <button id="clear-data-btn">Clear All Data</button>
+            </div>
+        </header>
+        <div class="date-selector slide-in">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date">
+            <div class="date-buttons">
+                <button id="prev-day">Prev Day</button>
+                <button id="today-btn">Today</button>
+                <button id="next-day">Next Day</button>
+            </div>
+            <button id="holiday-btn">Mark as Holiday</button>
+        </div>
+        <div class="attendance-list slide-in">
+            <h3>Mark Attendance</h3>
+            <ul id="student-list">
+                <!-- Students will be added here -->
+            </ul>
+        </div>
+        <button id="submit-btn" class="bounce-in">Submit Attendance</button>
+        <div class="records slide-in">
+            <h3>Attendance Records</h3>
+            <div id="records-display"></div>
+        </div>
+        <a href="student-data.html" class="view-data-link">View Student Data</a>
+        <div id="manage-students" style="display: none;">
+            <h3>Edit Student Names</h3>
+            <div id="student-inputs"></div>
+            <button id="save-students-btn">Save Changes</button>
+            <button id="cancel-students-btn">Cancel</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
